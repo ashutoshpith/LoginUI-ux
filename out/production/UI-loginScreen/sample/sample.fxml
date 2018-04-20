@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="circleBox" fill="#083e71d9" layoutX="870.0" layoutY="294.0" radius="47.0" stroke="#da1313" strokeType="INSIDE" AnchorPane.bottomAnchor="259.0" AnchorPane.leftAnchor="823.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="247.0" />
+      <Label layoutX="212.0" layoutY="247.0" prefHeight="18.0" prefWidth="222.0" text="User Name" AnchorPane.bottomAnchor="325.8" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="506.6" AnchorPane.topAnchor="247.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" layoutY="327.0" prefHeight="18.0" prefWidth="222.0" text="Password" AnchorPane.bottomAnchor="245.8" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="506.6" AnchorPane.topAnchor="327.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="212.0" layoutY="281.0" prefHeight="26.0" prefWidth="222.0" promptText="username" AnchorPane.bottomAnchor="292.6" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="506.6" AnchorPane.topAnchor="281.0" />
+      <JFXTextField layoutX="212.0" layoutY="364.0" prefHeight="26.0" prefWidth="222.0" promptText="password" AnchorPane.bottomAnchor="209.60000000000002" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="506.6" AnchorPane.topAnchor="364.0" />
+   </children>
+</AnchorPane>
