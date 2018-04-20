@@ -1,6 +1,7 @@
 package sample;
 
 import DBase.Conn;
+import DBase.InteractDb;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -10,10 +11,12 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Circle;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller  implements Initializable {
 
+    InteractDb interactDb=new InteractDb();
 
 
     @FXML
@@ -34,12 +37,25 @@ public class Controller  implements Initializable {
     @FXML
     private JFXButton loginBtn;
 
-    @FXML
-    void ClickLogin(ActionEvent event) {
-        Conn conn=new Conn();
-        conn.isConnected();
 
-        
+    @FXML
+    private Label userInfoLabel;
+
+    @FXML
+    private Label showConnectionLabel;
+
+
+
+    @FXML
+    void ClickLogin(ActionEvent event) throws SQLException {
+
+        if (interactDb.isLogin(usernameTxt.getText(),passTxt.getText())){
+            passLabel.setText("login");
+        }else{
+            passLabel.setText("not");
+        }
+
+
 
     }
 
@@ -65,6 +81,15 @@ public class Controller  implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+
+            if (interactDb.isDatabaseConnected()){
+            showConnectionLabel.setText("Connected");
+            }else {
+                showConnectionLabel.setText("not");
+            }
+
+
 
     }
 }

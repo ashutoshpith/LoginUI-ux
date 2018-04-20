@@ -27,5 +27,7 @@
             <Font size="19.0" />
          </font>
       </JFXButton>
+      <Label fx:id="userInfoLabel" layoutX="759.0" layoutY="14.0" prefHeight="59.0" prefWidth="167.0" text="Co" />
+      <Label fx:id="showConnectionLabel" layoutX="53.0" layoutY="35.0" prefHeight="27.0" prefWidth="94.0" text="Label" />
    </children>
 </AnchorPane>
