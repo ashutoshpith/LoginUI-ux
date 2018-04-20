@@ -4,9 +4,13 @@ import java.sql.*;
 
 public class InteractDb {
 
-    private Connection connection = null;
-    private PreparedStatement preparedStatement = null;
-    private ResultSet resultSet = null;
+    public Connection connection = null;
+    public PreparedStatement preparedStatement = null;
+    public ResultSet resultSet = null;
+
+    String id="";
+    String pass="";
+    String info="";
 
     public InteractDb() {
         try {
@@ -19,13 +23,13 @@ public class InteractDb {
 
     }
 
-
-
         public boolean isDatabaseConnected(){
             return this.connection!=null;
         }
 
         public boolean isLogin(String id, String pass) throws SQLException {
+        this.id=id;
+        this.pass=pass;
             String sql = "SELECT * FROM login.users WHERE id =? and pass=?";
 
             preparedStatement = connection.prepareStatement(sql);
@@ -42,15 +46,7 @@ public class InteractDb {
         }
 
 
-        public void showUserProfile() throws SQLException {
-        String info="";
-        String sql="SELECT * FROM login.users WHERE info=?";
-        preparedStatement=connection.prepareStatement(sql);
-        preparedStatement.setString(3,info);
 
-
-
-        }
 
 
 
